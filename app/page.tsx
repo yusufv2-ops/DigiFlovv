@@ -219,9 +219,9 @@ const Logo = ({
 const Header = () => {
   const { language, setLanguage, t } = useLanguage()
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md border-b border-sky-100/50">
-      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-        <Logo className="h-12" />
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-100">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <Logo className="h-14" />
 
         <nav className="hidden md:flex items-center space-x-8">
           <a
@@ -261,15 +261,16 @@ const Header = () => {
           </a>
         </nav>
 
-        <button className="md:hidden text-slate-900">
+        <button className="md:hidden text-[#2c4266]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-7 w-7"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            strokeWidth={2}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16" />
           </svg>
         </button>
       </div>
@@ -280,41 +281,30 @@ const Header = () => {
 const Hero = () => {
   const { t } = useLanguage()
   return (
-    <section className="pt-40 pb-20 md:pt-52 md:pb-32 px-6 overflow-hidden relative bg-gradient-to-b from-[#f0f9f8] to-white">
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#82cec4] rounded-full blur-[100px] opacity-10"></div>
-
-      <div className="max-w-5xl mx-auto text-center relative z-10">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-[#2c4266] mb-6 tracking-tight leading-tight text-balance">
-          {t.hero.title} <br />
-          <span className="text-[#82cec4]">{t.hero.subtitle}</span>
+    <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-6 overflow-hidden relative bg-gradient-to-b from-[#d4eeeb] via-[#e8f5f3] to-[#f0f9f8]">
+      <div className="max-w-3xl mx-auto text-center relative z-10">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-[#2c4266] mb-2 tracking-tight leading-tight">
+          {t.hero.title}
         </h1>
-        <p className="text-xl md:text-2xl text-slate-500 mb-10 font-light max-w-2xl mx-auto text-pretty">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-[#82cec4] mb-8 tracking-tight leading-tight">
+          {t.hero.subtitle}
+        </h1>
+        <p className="text-lg md:text-xl text-slate-500 mb-12 font-normal max-w-xl mx-auto leading-relaxed">
           {t.hero.description}
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
           <a
             href="#services"
-            className="w-full sm:w-auto px-10 py-5 bg-[#2c4266] text-white font-bold rounded-2xl hover:bg-[#1a2b45] hover:scale-105 transition-all shadow-xl shadow-slate-200 text-lg uppercase tracking-wider"
+            className="w-full px-10 py-5 bg-[#2c4266] text-white font-bold rounded-2xl hover:bg-[#1a2b45] transition-all text-base uppercase tracking-widest text-center"
           >
             {t.hero.getStarted}
           </a>
           <a
             href="#privacy"
-            className="w-full sm:w-auto px-10 py-5 bg-white text-slate-700 font-semibold rounded-2xl border border-slate-200 hover:bg-slate-50 transition-all text-lg"
+            className="w-full px-10 py-5 bg-white text-[#2c4266] font-semibold rounded-2xl border-2 border-slate-200 hover:bg-slate-50 transition-all text-base text-center"
           >
             {t.hero.learnMore}
           </a>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto mt-20 relative">
-        <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-[12px] border-white">
-          <img
-            src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=1200&h=600"
-            alt="Digital Minimalism"
-            className="w-full h-auto object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2c4266]/30 to-transparent"></div>
         </div>
       </div>
     </section>
